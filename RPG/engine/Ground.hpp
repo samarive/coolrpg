@@ -11,6 +11,8 @@ class Ground: public Object
 private:
 	sf::Texture *sprite;
 
+	std::string spriteFile;
+
 public:
 
 	Ground(int x,int y,int w,int h,std::string const& type,TextureIO & io);
@@ -21,7 +23,9 @@ public:
 	virtual void update();
 	virtual void paint();
 
-	void setSprite(sf::Texture *t);
+	virtual std::string toString() const;
+
+	std::string getSpriteFile() const;
 
 };
 

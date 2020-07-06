@@ -2,6 +2,8 @@
 
 Ground::Ground(int x,int y,int w,int h,std::string const& type,TextureIO & io):Object::Object(x,y,w,h)
 {	
+	spriteFile = type;
+
 	sprite = io.getTexture(type);
 
 	sprite->setRepeated(true);
@@ -34,7 +36,13 @@ void Ground::paint()
 	if(sprite!=0)getPanel()->draw(s);
 }
 
-void Ground::setSprite(sf::Texture *t)
+
+std::string Ground::getSpriteFile() const
 {
-	sprite = t;
+	return spriteFile;
+}
+
+std::string Ground::toString() const
+{
+	return "ground";
 }

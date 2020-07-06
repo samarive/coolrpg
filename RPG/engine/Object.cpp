@@ -42,3 +42,7 @@ void Object::setPanel(sf::RenderWindow & newPanel)
 {
 	panel = &newPanel;
 }
+std::string Object::toString() const
+{
+	return "object";
+}

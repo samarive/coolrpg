@@ -2,6 +2,8 @@
 #define OBJECT_HPP_INCLUDED
 
 #include <SFML/Graphics.hpp>
+#include <string>
+
 
 class Object
 {
@@ -31,6 +33,8 @@ public:
 	void setX(int newX);
 	void setY(int newY);
 	void setPanel(sf::RenderWindow & newPanel);
+
+	virtual std::string toString() const;
 };
 
 #endif
