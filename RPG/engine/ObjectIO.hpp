@@ -23,6 +23,10 @@ public:
 
 	Object* loadObject(int nbr,TextureIO & txtrio);
 	bool saveObject(Object *arg);
+
+	int getWrittenObjectNbr();
+
+	void eraseFile();
 };
 
 std::string getStringFromTo(char beg,char end,std::string const& arg,int startAt);

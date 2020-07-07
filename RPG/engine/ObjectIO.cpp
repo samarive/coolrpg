@@ -1,5 +1,6 @@
 #include "ObjectIO.hpp"
 
+#include <iostream>
 #include <fstream>
 #include "TextureIO.hpp"
 #include "Ground.hpp"
@@ -15,7 +16,7 @@ ObjectIO::~ObjectIO()
 }
 
 Object* ObjectIO::loadObject(int nbr,TextureIO & txtrio)
-{//IT NEEDS SOME TESTS !
+{
 
 	int prev (allocated.size());
 
@@ -66,9 +67,39 @@ Object* ObjectIO::loadObject(int nbr,TextureIO & txtrio)
 
 }
 
+int ObjectIO::getWrittenObjectNbr()
+{
+	std::ifstream input (filepath);
+
+	int nbr (0);
+
+	std::string temp ("");
+
+	if(input)
+	{
+		while(getline(input,temp))
+		{
+			nbr++;
+		}
+	}
+
+	return nbr;
+}
+
+void ObjectIO::eraseFile()
+{
+	#ifdef __WIN32__
+		system(("del "+filepath).c_str());
+		system(("type nul > "+filepath).c_str());
+	#else
+		system(("rm "+filepath).c_str());
+		system(("touch "+filepath).c_str());
+	#endif
+}
+
 bool ObjectIO::saveObject(Object *arg)
 {
-	std::ofstream output (filepath); 
+	std::ofstream output (filepath,std::ios::app); 
 
 	if(arg->toString()=="ground" && output)
 	{
