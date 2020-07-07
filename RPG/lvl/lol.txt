@@ -1,0 +1,8 @@
+;1;773;430;7;26;img/grounds/grass.png;
+;1;780;449;3;5;img/grounds/grass.png;
+;1;792;434;5;24;img/grounds/grass.png;
+;1;797;450;15;8;img/grounds/grass.png;
+;1;810;433;7;25;img/grounds/grass.png;
+;1;791;425;26;14;img/grounds/grass.png;
+;1;831;432;3;19;img/grounds/grass.png;
+;1;833;446;15;4;img/grounds/grass.png;
