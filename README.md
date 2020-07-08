@@ -24,4 +24,4 @@ Engine :
 
 Level Editor :
 
-<code>g++ "level editor"/main.cpp -o editor.exe -L[Your SFML library folder] -I[Your SFML include folder] -lsfml-graphics -lsfml-window -lsfml-system</code>
+<code>g++ "level editor"/main.cpp -o editor.exe -L../RPG/ -lrpg -L[Your SFML library folder] -I[Your SFML include folder] -lsfml-graphics -lsfml-window -lsfml-system</code>
