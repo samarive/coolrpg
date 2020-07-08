@@ -1,5 +1,5 @@
 # coolrpg
-A cool RPG !
+A cool RPG featuring the best "Map" class I ever coded !
 
 Now programming engine.
 
